@@ -1,0 +1,37 @@
+<link href='http://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+<div id="container">
+<h1>Mad Libs!</h1>
+	<div id="da_form">
+	<%= form_for(@madlib, remote: true) do |f| %>
+		<div class="fields_left">
+		<%= f.label :noun %>
+		<%= f.text_field :noun %><br>
+		<%= f.label :proper_noun %>
+		<%= f.text_field :proper_noun %>
+		</div>
+		<div class="fields_right">
+		<%= f.label :adjective %>
+		<%= f.text_field :adjective %><br>
+		<%= f.label :verb %> (past tense!)
+		<%= f.text_field :verb %>
+		</div>
+		<%= f.submit %>
+	<% end %>
+	</div>
+
+<!-- list of all madlibs -->
+<!--   t.string   "verb"
+    t.string   "noun"
+    t.string   "adjective"
+    t.string   "proper_noun" -->
+	<div id="madlibs">
+		<% @madlibs.each do |madlib| %>
+		
+	</li>
+	  	<%= render "madlib", :madlib => madlib %>
+		<%#= render m, :madlib => m %>		
+
+		<% end %>
+	</div>
+</div>

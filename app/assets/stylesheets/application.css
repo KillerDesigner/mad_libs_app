@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+h1
+{
+	font-family: Delius Swash Caps;
+	font-size: 35;
+	text-align: left;
+}
+#container
+{
+	/*text-align: left;*/
+	max-width: 800px;
+}
+#da_form
+{
+ 	padding-top: 30px;
+ 	padding-bottom: 50px;
+ 	padding: 30px;
+ 	border: 5px solid black;
+ 	max-width: 600px;
+ 	/*text-align: left;*/
+ 	font-size: 14;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+#form_group
+{
+	font-size: 14;
+	font-family: Helvetica;
+	font-weight: bold;
+	/*text-align: left;*/
+}
+.fields_left
+{
+	/*border: 2px solid black;*/
+	width: 100%;
+	font-family: Arial;
+	font-size: 14;
+	display: inline-block;
+	text-align: right;
+}
+.fields_right
+{
+	/*border: 2px solid black;*/
+	width: 100%;
+	font-family: Arial;
+	font-size: 14;
+	display: inline-block;
+	text-align: right;
+}
+#madlibs
+{
+	font-family: The Girl Next Door;
+	padding: 30px;
+	font-weight: bold;
+	font-size: 30;
+	text-align: left;
+}
