@@ -3,18 +3,18 @@
 <div id="container">
 <h1>Mad Libs!</h1>
 	<div id="da_form">
-	<%= form_for(@madlib, remote: true) do |f| %>
+	<%= form_for(@mad_lib, remote: true) do |f| %>
 		<div class="fields_left">
 		<%= f.label :noun %>
-		<%= f.text_field :noun %><br>
+		<%= f.text_field :noun, placeholder: "noun" %><br>
 		<%= f.label :proper_noun %>
-		<%= f.text_field :proper_noun %>
+		<%= f.text_field :proper_noun, placeholder: "proper noun" %>
 		</div>
 		<div class="fields_right">
 		<%= f.label :adjective %>
-		<%= f.text_field :adjective %><br>
+		<%= f.text_field :adjective, placeholder: "adjective" %><br>
 		<%= f.label :verb %> (past tense!)
-		<%= f.text_field :verb %>
+		<%= f.text_field :verb, placeholder: "verb" %>
 		</div>
 		<%= f.submit %>
 	<% end %>
@@ -26,10 +26,10 @@
     t.string   "adjective"
     t.string   "proper_noun" -->
 	<div id="madlibs">
-		<% @madlibs.each do |madlib| %>
+		<% @mad_libs.each do |mad_lib| %>
 		
 	</li>
-	  	<%= render "madlib", :madlib => madlib %>
+	  	<%= render "mad_lib", :mad_lib => mad_lib %>
 		<%#= render m, :madlib => m %>		
 
 		<% end %>

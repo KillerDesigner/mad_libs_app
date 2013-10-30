@@ -1,2 +1,1 @@
-var madlib = '<li data-id="<%=@madlib.id%>"><%= @madlib.noun %> - <%= @madlib.verb %> <%= link_to "delete", mad_lib_path(@madlib), :method => "delete", :remote => true %></li> (javascript create)';
-$("#madlibs").append(item);
+$("#madlibs").append('<%= escape_javascript(render @mad_lib) %>');

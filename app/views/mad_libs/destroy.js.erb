@@ -1,3 +1,6 @@
 var id = <%= @id %>;
+console.log('hi');
 console.log(id);
-$('li[data-id=' + id +']').remove();
+var remove_it = 'li[data-id=' + id +']'
+console.log(remove_it);
+$(remove_it).remove();
