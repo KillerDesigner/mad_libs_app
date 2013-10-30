@@ -12,7 +12,10 @@
  *= require_tree .
  */
 
-
+body
+{
+	background-color: pink;
+}
 h1
 {
 	font-family: Delius Swash Caps;
@@ -26,6 +29,8 @@ h1
 }
 #da_form
 {
+	background-color: white;
+	opacity: .8;
  	padding-top: 30px;
  	padding-bottom: 50px;
  	padding: 30px;
