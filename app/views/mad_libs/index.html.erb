@@ -4,19 +4,18 @@
 <h1>Mad Libs!</h1>
 	<div id="da_form">
 	<%= form_for(@mad_lib, remote: true) do |f| %>
-		<div class="fields_left">
+		<div class="fields">
 		<%= f.label :noun %>
-		<%= f.text_field :noun, placeholder: "noun" %><br>
+		<%= f.text_field :noun, placeholder: :noun, autofocus: true, required: true %><br>
 		<%= f.label :proper_noun %>
-		<%= f.text_field :proper_noun, placeholder: "proper noun" %>
-		</div>
-		<div class="fields_right">
+		<%= f.text_field :proper_noun, placeholder: "proper noun", required: true %><br>
 		<%= f.label :adjective %>
-		<%= f.text_field :adjective, placeholder: "adjective" %><br>
+		<%= f.text_field :adjective, placeholder: "adjective", required: true %><br>
 		<%= f.label :verb %> (past tense!)
-		<%= f.text_field :verb, placeholder: "verb" %>
+		<%= f.text_field :verb, placeholder: "verb", required: true %>
 		</div>
-		<%= f.submit %>
+		<%#= f.submit %>
+		<button type="submit" class="css3button">make mad lib</button>
 	<% end %>
 	</div>
 
