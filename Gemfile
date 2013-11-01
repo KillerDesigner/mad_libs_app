@@ -8,6 +8,11 @@ gem 'rails', '3.2.14'
 gem 'sqlite3'
 gem 'pry-rails'
 gem 'pry'
+gem 'will_paginate', '~> 3.0'
+
+group :production do
+  #gem 'pg'
+end
 
 
 # Gems used only for assets and not required

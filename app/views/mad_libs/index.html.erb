@@ -1,7 +1,7 @@
 <link href='http://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
 <div id="container">
-<h1>Mad Libs!</h1>
+<div id="title">Mad Libs!</div>
 	<div id="da_form">
 	<%= form_for(@mad_lib, remote: true) do |f| %>
 		<div class="fields">
@@ -25,12 +25,13 @@
     t.string   "adjective"
     t.string   "proper_noun" -->
 	<div id="madlibs">
-		<% @mad_libs = @mad_libs.reverse %>
-		<% @mad_libs.each do |mad_lib| %>
+		<% @mad_libs_reversed = @mad_libs.reverse %>
+		<% @mad_libs_reversed.each do |mad_lib| %>
 		
 	</li>
 	  	<%= render "mad_lib", :mad_lib => mad_lib %>
-		<%#= render m, :madlib => m %>		
 		<% end %>
+		
 	</div>
+<%= will_paginate @mad_libs %>
 </div>

@@ -1,1 +1,7 @@
 $("#madlibs").append('<%= escape_javascript(render @mad_lib) %>');
+
+// clear fields after form submit
+$('#mad_lib_noun').val("");
+$('#mad_lib_proper_noun').val("");
+$('#mad_lib_verb').val("");
+$('#mad_lib_adjective').val("");
