@@ -1,7 +1,7 @@
 class MadLibsController < ApplicationController
   def index
   	#@mad_libs = MadLib.all
-    @mad_libs = MadLib.paginate(page: params[:page], per_page: 4) 
+    @mad_libs = MadLib.paginate(page: params[:page], per_page: 4).order('created_at DESC') 
     @mad_lib = MadLib.new
 
   	respond_to do |format|
