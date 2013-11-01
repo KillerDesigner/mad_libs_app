@@ -25,12 +25,12 @@
     t.string   "adjective"
     t.string   "proper_noun" -->
 	<div id="madlibs">
+		<% @mad_libs = @mad_libs.reverse %>
 		<% @mad_libs.each do |mad_lib| %>
 		
 	</li>
 	  	<%= render "mad_lib", :mad_lib => mad_lib %>
 		<%#= render m, :madlib => m %>		
-
 		<% end %>
 	</div>
 </div>

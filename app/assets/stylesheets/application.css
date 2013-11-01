@@ -78,10 +78,19 @@ li
   list-style: none;
   border-radius: 10px;
 }
-
-li:nth-child(even) 
+li:nth-child(even)
 {
-  background-color: #ffffcc;
+	background-color: white;
+}
+a:visited, a:link 
+{
+   color: green;
+   text-decoration: none;
+}
+a:hover
+{
+   color: #ffffcc;
+   text-decoration: underline;
 }
 
 #madlibs

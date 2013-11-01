@@ -8,16 +8,9 @@ class MadLibsController < ApplicationController
   	end
   end
 
-  def create
-  	#@madlib = MadLib.create(noun: params[:noun], verb: params[:verb], proper_noun: params[:proper_noun], adjective: params[:adjective])
+  def create 	
   	@mad_lib = MadLib.create(params[:mad_lib])
- 	puts "$$$$$$$$$$$$$$$"
- 	puts @mad_lib.inspect
- 	puts params[:mad_lib]
- 	# puts params[:verb]
- 	# puts params[:proper_noun]
- 	puts "**************"
- 	#binding.pry
+
   	respond_to do |format|
   	  format.js
   	end
@@ -25,6 +18,7 @@ class MadLibsController < ApplicationController
 
   def destroy
   	@mad_lib = MadLib.delete(params[:id])
+    @id = params[:id]
 
   	respond_to do |format|
   	  format.js

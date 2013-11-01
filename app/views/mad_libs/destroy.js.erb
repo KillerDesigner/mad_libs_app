@@ -1,6 +1,3 @@
-var id = <%= @id %>;
-console.log('hi');
-console.log(id);
+var id = "<%= @id %>";
 var remove_it = 'li[data-id=' + id +']'
-console.log(remove_it);
 $(remove_it).remove();
